@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Sprout, 
-  Star, 
-  Users, 
-  Shield, 
-  Truck, 
+import {
+  Sprout,
+  Star,
+  Users,
+  Shield,
+  Truck,
   ChevronRight,
   Phone,
   MapPin,
@@ -59,7 +59,7 @@ const Home = () => {
       icon: Shield
     },
     {
-      name: 'Herbicides', 
+      name: 'Herbicides',
       count: 12,
       image: 'https://images.pexels.com/photos/1382394/pexels-photo-1382394.jpeg?auto=compress&cs=tinysrgb&w=400',
       color: 'from-blue-500 to-blue-600',
@@ -132,7 +132,7 @@ const Home = () => {
           <div className="absolute top-40 right-20 w-16 h-16 bg-green-500 rounded-full"></div>
           <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-green-400 rounded-full"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -151,20 +151,21 @@ const Home = () => {
                     🌱 Trusted Since Establishment
                   </Badge>
                 </motion.div>
-                
-                <motion.h1 
+
+                <motion.h1
                   className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                 >
+
                   Your Agriculture
                   <span className="text-green-600 block bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
                     Solutions Partner
                   </span>
                 </motion.h1>
-                
-                <motion.p 
+
+                <motion.p
                   className="text-xl text-gray-600 dark:text-gray-300 max-w-xl leading-relaxed"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -174,7 +175,7 @@ const Home = () => {
                 </motion.p>
               </div>
 
-              <motion.div 
+              <motion.div
                 className="flex flex-col sm:flex-row gap-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -193,7 +194,7 @@ const Home = () => {
               </motion.div>
 
               {/* Quick Stats */}
-              <motion.div 
+              <motion.div
                 className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -233,7 +234,7 @@ const Home = () => {
                   <p className="text-white/90 text-lg">Trusted by 1000+ farmers</p>
                 </div>
               </div>
-              
+
               {/* Floating Cards */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -428,7 +429,7 @@ const Home = () => {
           <div className="absolute bottom-10 right-10 w-24 h-24 bg-white rounded-full"></div>
           <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white rounded-full"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -46,7 +46,7 @@ const Login = () => {
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
           <div className="flex items-center justify-center mb-4">
-            <Sprout className="h-8 w-8 text-green-600" /> {/* ✅ Fixed icon */}
+            <Sprout className="h-8 w-8 text-green-600" />
           </div>
           <CardTitle className="text-2xl text-center">Welcome back</CardTitle>
           <CardDescription className="text-center">
@@ -56,7 +56,7 @@ const Login = () => {
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email" className="text-left block">Email</Label>
               <Input
                 id="email"
                 type="email"
@@ -67,7 +67,7 @@ const Login = () => {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password" className="text-left block">Password</Label>
               <Input
                 id="password"
                 type="password"
@@ -93,7 +93,7 @@ const Login = () => {
             <Separator />
             <div className="absolute inset-0 flex items-center justify-center">
               <span className="bg-background px-2 text-muted-foreground text-sm">
-                Demo Credentials
+                {/* Demo Credentials */}
               </span>
             </div>
           </div>
@@ -101,7 +101,7 @@ const Login = () => {
         <CardFooter>
           <div className="text-sm text-center w-full">
             Don&apos;t have an account?{' '}
-            <Link to="/auth/register" className="text-green-600 hover:underline">
+            <Link to="/register" className="text-green-600 hover:underline">
               Sign up
             </Link>
           </div>
