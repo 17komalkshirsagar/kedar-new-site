@@ -8,14 +8,14 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Separator } from '@/components/ui/separator';
-import { 
-  Star, 
-  MessageCircle, 
-  Share2, 
-  ArrowLeft, 
-  Check, 
+import {
+  Star,
+  MessageCircle,
+  Share2,
+  ArrowLeft,
+  Check,
   User,
-  Phone,
+
   Heart,
   Shield,
   Truck,
@@ -24,7 +24,7 @@ import {
 import { toast } from 'sonner';
 
 const ProductDetail = () => {
-  const { id } = useParams();
+
   const [selectedImage, setSelectedImage] = useState(0);
   const [inquiryForm, setInquiryForm] = useState({
     name: '',
@@ -97,7 +97,7 @@ const ProductDetail = () => {
 
   const handleInquirySubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!inquiryForm.name || !inquiryForm.phone) {
       toast.error('Please fill in all required fields');
       return;
@@ -111,7 +111,7 @@ Message: ${inquiryForm.message || 'Please provide more details about pricing and
 
     const url = `https://wa.me/919423723375?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
-    
+
     toast.success('Inquiry sent! We will contact you soon.');
     setInquiryForm({ name: '', phone: '', message: '' });
   };
@@ -176,9 +176,8 @@ Message: ${inquiryForm.message || 'Please provide more details about pricing and
                 <button
                   key={index}
                   onClick={() => setSelectedImage(index)}
-                  className={`flex-1 aspect-square bg-muted rounded-lg overflow-hidden border-2 ${
-                    selectedImage === index ? 'border-green-600' : 'border-transparent'
-                  }`}
+                  className={`flex-1 aspect-square bg-muted rounded-lg overflow-hidden border-2 ${selectedImage === index ? 'border-green-600' : 'border-transparent'
+                    }`}
                 >
                   <img
                     src={image}
@@ -204,7 +203,7 @@ Message: ${inquiryForm.message || 'Please provide more details about pricing and
                 {product.isNew && <Badge className="bg-green-500">New</Badge>}
                 {product.discount && <Badge variant="destructive">{product.discount}% OFF</Badge>}
               </div>
-              
+
               <h1 className="text-3xl font-bold">{product.name}</h1>
               <p className="text-lg text-muted-foreground">{product.brand}</p>
               <p className="text-muted-foreground">{product.description}</p>
@@ -216,11 +215,10 @@ Message: ${inquiryForm.message || 'Please provide more details about pricing and
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    className={`h-5 w-5 ${
-                      i < Math.floor(product.rating) 
-                        ? 'text-yellow-400 fill-current' 
-                        : 'text-gray-300'
-                    }`}
+                    className={`h-5 w-5 ${i < Math.floor(product.rating)
+                      ? 'text-yellow-400 fill-current'
+                      : 'text-gray-300'
+                      }`}
                   />
                 ))}
                 <span className="font-medium ml-2">{product.rating}</span>
@@ -341,7 +339,7 @@ Message: ${inquiryForm.message || 'Please provide more details about pricing and
                     <Input
                       id="name"
                       value={inquiryForm.name}
-                      onChange={(e) => setInquiryForm({...inquiryForm, name: e.target.value})}
+                      onChange={(e) => setInquiryForm({ ...inquiryForm, name: e.target.value })}
                       placeholder="Your full name"
                     />
                   </div>
@@ -350,7 +348,7 @@ Message: ${inquiryForm.message || 'Please provide more details about pricing and
                     <Input
                       id="phone"
                       value={inquiryForm.phone}
-                      onChange={(e) => setInquiryForm({...inquiryForm, phone: e.target.value})}
+                      onChange={(e) => setInquiryForm({ ...inquiryForm, phone: e.target.value })}
                       placeholder="Your phone number"
                     />
                   </div>
@@ -359,7 +357,7 @@ Message: ${inquiryForm.message || 'Please provide more details about pricing and
                     <Textarea
                       id="message"
                       value={inquiryForm.message}
-                      onChange={(e) => setInquiryForm({...inquiryForm, message: e.target.value})}
+                      onChange={(e) => setInquiryForm({ ...inquiryForm, message: e.target.value })}
                       placeholder="Additional details or questions..."
                       rows={3}
                     />
@@ -401,9 +399,8 @@ Message: ${inquiryForm.message || 'Please provide more details about pricing and
                             {[...Array(5)].map((_, i) => (
                               <Star
                                 key={i}
-                                className={`h-3 w-3 ${
-                                  i < review.rating ? 'text-yellow-400 fill-current' : 'text-gray-300'
-                                }`}
+                                className={`h-3 w-3 ${i < review.rating ? 'text-yellow-400 fill-current' : 'text-gray-300'
+                                  }`}
                               />
                             ))}
                           </div>

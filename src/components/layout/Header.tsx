@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { ThemeToggle } from '@/components/ThemeToggle';
@@ -32,11 +32,10 @@ const Header = () => {
 
   return (
     <motion.header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled
           ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border-b shadow-sm'
           : 'bg-white dark:bg-gray-900 border-b'
-      }`}
+        }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.3 }}
@@ -64,11 +63,10 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`relative py-2 text-sm font-medium transition-colors hover:text-green-600 ${
-                  isActive(item.href)
+                className={`relative py-2 text-sm font-medium transition-colors hover:text-green-600 ${isActive(item.href)
                     ? 'text-green-600'
                     : 'text-gray-700 dark:text-gray-300'
-                }`}
+                  }`}
               >
                 {item.name}
                 {isActive(item.href) && (
@@ -96,7 +94,7 @@ const Header = () => {
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
             <ThemeToggle />
-            
+
             {/* Login Button - Desktop */}
             <Link to="/login" className="hidden md:block">
               <Button variant="outline" size="sm" className="flex items-center space-x-2 border-green-600 text-green-600 hover:bg-green-50 dark:hover:bg-green-900/20">
@@ -122,7 +120,7 @@ const Header = () => {
                       className="pl-10"
                     />
                   </div>
-                  
+
                   {/* Mobile Navigation */}
                   <nav className="flex flex-col space-y-4">
                     {navigation.map((item) => (
@@ -130,17 +128,16 @@ const Header = () => {
                         key={item.name}
                         to={item.href}
                         onClick={() => setIsOpen(false)}
-                        className={`text-lg font-medium transition-colors hover:text-green-600 ${
-                          isActive(item.href)
+                        className={`text-lg font-medium transition-colors hover:text-green-600 ${isActive(item.href)
                             ? 'text-green-600'
                             : 'text-gray-700 dark:text-gray-300'
-                        }`}
+                          }`}
                       >
                         {item.name}
                       </Link>
                     ))}
                   </nav>
-                  
+
                   {/* Mobile Login */}
                   <Link to="/login" onClick={() => setIsOpen(false)}>
                     <Button className="w-full flex items-center space-x-2 bg-green-600 hover:bg-green-700">

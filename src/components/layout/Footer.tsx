@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
-import { 
-  Sprout, 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Star, 
+import {
+  Sprout,
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Star,
   ExternalLink,
   MessageCircle
 } from 'lucide-react';
@@ -29,7 +29,7 @@ const Footer = () => {
       name: 'Facebook',
       icon: () => (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
         </svg>
       ),
       href: '#',
@@ -40,7 +40,7 @@ const Footer = () => {
       name: 'Instagram',
       icon: () => (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.418-3.323c.875-.875 2.026-1.297 3.323-1.297s2.448.422 3.323 1.297c.928.875 1.418 2.026 1.418 3.323s-.49 2.448-1.418 3.244c-.875.807-2.026 1.297-3.323 1.297zm7.83-9.781c-.49 0-.928-.422-.928-.928 0-.49.438-.928.928-.928.49 0 .928.438.928.928 0 .506-.438.928-.928.928zm-3.323 9.307c-1.297 0-2.448-.49-3.323-1.297-.928-.807-1.418-1.958-1.418-3.255s.49-2.448 1.418-3.323c.875-.875 2.026-1.297 3.323-1.297s2.448.422 3.323 1.297c.928.875 1.418 2.026 1.418 3.323s-.49 2.448-1.418 3.255c-.875.807-2.026 1.297-3.323 1.297z"/>
+          <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.418-3.323c.875-.875 2.026-1.297 3.323-1.297s2.448.422 3.323 1.297c.928.875 1.418 2.026 1.418 3.323s-.49 2.448-1.418 3.244c-.875.807-2.026 1.297-3.323 1.297zm7.83-9.781c-.49 0-.928-.422-.928-.928 0-.49.438-.928.928-.928.49 0 .928.438.928.928 0 .506-.438.928-.928.928zm-3.323 9.307c-1.297 0-2.448-.49-3.323-1.297-.928-.807-1.418-1.958-1.418-3.255s.49-2.448 1.418-3.323c.875-.875 2.026-1.297 3.323-1.297s2.448.422 3.323 1.297c.928.875 1.418 2.026 1.418 3.323s-.49 2.448-1.418 3.255c-.875.807-2.026 1.297-3.323 1.297z" />
         </svg>
       ),
       href: '#',
@@ -58,7 +58,7 @@ const Footer = () => {
 
   const productCategories = [
     'Insecticides',
-    'Herbicides', 
+    'Herbicides',
     'Fungicides',
     'Seeds',
     'Fertilizers'
@@ -87,7 +87,7 @@ const Footer = () => {
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
               Your trusted partner for all agriculture needs. Quality products, expert advice, and reliable service since our establishment.
             </p>
-            
+
             {/* Google Reviews Summary */}
             <div className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-green-200 dark:border-gray-700 shadow-sm">
               <div className="flex items-center space-x-2 mb-3">
@@ -95,9 +95,8 @@ const Footer = () => {
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className={`h-4 w-4 ${
-                        i < 4 ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'
-                      }`}
+                      className={`h-4 w-4 ${i < 4 ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'
+                        }`}
                     />
                   ))}
                 </div>
@@ -135,8 +134,8 @@ const Footer = () => {
                   <p className="text-sm text-gray-700 dark:text-gray-300">Maharashtra 431103</p>
                 </div>
               </div>
-              
-              <a 
+
+              <a
                 href="tel:+919423723375"
                 className="flex items-center space-x-3 text-sm hover:text-green-600 transition-colors group"
               >
@@ -145,8 +144,8 @@ const Footer = () => {
                 </div>
                 <span className="text-gray-700 dark:text-gray-300 group-hover:text-green-600">+91 9423723375</span>
               </a>
-              
-              <a 
+
+              <a
                 href="mailto:kedarkrushiseva@gmail.com"
                 className="flex items-center space-x-3 text-sm hover:text-green-600 transition-colors group"
               >
@@ -155,7 +154,7 @@ const Footer = () => {
                 </div>
                 <span className="text-gray-700 dark:text-gray-300 group-hover:text-green-600">kedarkrushiseva@gmail.com</span>
               </a>
-              
+
               <div className="flex items-start space-x-3">
                 <div className="w-8 h-8 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                   <Clock className="h-4 w-4 text-orange-600" />
@@ -188,7 +187,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            
+
             <div>
               <h4 className="text-md font-medium text-gray-900 dark:text-white mb-3">Product Categories</h4>
               <ul className="space-y-2">
@@ -217,10 +216,10 @@ const Footer = () => {
             <p className="text-gray-600 dark:text-gray-400 text-sm">
               Subscribe to get updates on new products and farming tips.
             </p>
-            
+
             <div className="space-y-3">
-              <Input 
-                type="email" 
+              <Input
+                type="email"
                 placeholder="Enter your email"
                 className="bg-white dark:bg-gray-800 border-green-200 dark:border-gray-600"
               />
@@ -232,25 +231,29 @@ const Footer = () => {
             <div className="space-y-4">
               <h4 className="text-md font-medium text-gray-900 dark:text-white">Follow Us</h4>
               <div className="flex space-x-3">
-                {socialLinks.map((social) => (
-                  <motion.a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`p-3 rounded-xl transition-all duration-200 ${social.color} ${social.bgColor}`}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    {typeof social.icon === 'function' ? <social.icon /> : <social.icon className="h-5 w-5" />}
-                  </motion.a>
-                ))}
+                {socialLinks.map((social) => {
+                  const Icon = social.icon;
+                  return (
+                    <motion.a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`p-3 rounded-xl transition-all duration-200 ${social.color} ${social.bgColor}`}
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      <Icon className="h-5 w-5" />
+                    </motion.a>
+                  );
+                })}
               </div>
+
             </div>
 
             {/* Google Maps Direction Button */}
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="w-full border-green-600 text-green-600 hover:bg-green-50 dark:hover:bg-green-900/20"
               onClick={() => window.open('https://maps.google.com?q=40+Gaon+Road,+Kannad,+Chhatrapati+Sambhajinagar,+Maharashtra+431103', '_blank')}
             >
@@ -261,7 +264,7 @@ const Footer = () => {
         </div>
 
         <Separator className="my-8 bg-green-200 dark:bg-gray-700" />
-        
+
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-600 dark:text-gray-400">
             © {currentYear} Kedar Krushi Seva Kendra. All rights reserved.

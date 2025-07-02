@@ -1,13 +1,12 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Users, 
-  Award, 
-  MapPin, 
-  Clock, 
-  Phone, 
-  Mail, 
+import {
+  Users,
+  MapPin,
+  Clock,
+  Phone,
+  Mail,
   Sprout,
   Target,
   Heart,
@@ -93,11 +92,11 @@ const About = () => {
                 <span className="text-green-600 block">2015</span>
               </h1>
               <p className="text-xl text-muted-foreground">
-                At Kedar Krushi Seva Kendra, we believe in the power of agriculture to transform lives. 
-                Our journey began with a simple mission: to provide farmers with the best quality products 
+                At Kedar Krushi Seva Kendra, we believe in the power of agriculture to transform lives.
+                Our journey began with a simple mission: to provide farmers with the best quality products
                 and expert guidance to help them achieve agricultural excellence.
               </p>
-              
+
               {/* Quick Stats */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6">
                 {stats.map((stat, index) => (
@@ -166,8 +165,8 @@ const About = () => {
                   </div>
                   <h3 className="text-2xl font-bold">Our Mission</h3>
                   <p className="text-muted-foreground text-lg leading-relaxed">
-                    To empower farmers with high-quality agricultural products, expert knowledge, and reliable service 
-                    that helps them achieve better yields and sustainable farming practices. We are committed to being 
+                    To empower farmers with high-quality agricultural products, expert knowledge, and reliable service
+                    that helps them achieve better yields and sustainable farming practices. We are committed to being
                     the trusted partner that farmers can depend on for all their agricultural needs.
                   </p>
                 </CardContent>
@@ -186,8 +185,8 @@ const About = () => {
                   </div>
                   <h3 className="text-2xl font-bold">Our Vision</h3>
                   <p className="text-muted-foreground text-lg leading-relaxed">
-                    To be the leading agricultural solutions provider in Maharashtra, fostering a thriving farming 
-                    community through innovation, quality products, and exceptional service. We envision a future 
+                    To be the leading agricultural solutions provider in Maharashtra, fostering a thriving farming
+                    community through innovation, quality products, and exceptional service. We envision a future
                     where every farmer has access to the tools and knowledge they need to succeed.
                   </p>
                 </CardContent>
@@ -238,7 +237,7 @@ const About = () => {
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-green-600 h-full hidden lg:block" />
-            
+
             <div className="space-y-12">
               {milestones.map((milestone, index) => (
                 <motion.div
@@ -246,9 +245,8 @@ const About = () => {
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className={`flex items-center justify-between ${
-                    index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                  } flex-col lg:flex-row gap-8`}
+                  className={`flex items-center justify-between ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                    } flex-col lg:flex-row gap-8`}
                 >
                   <div className={`w-full lg:w-5/12 ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
                     <Card className="p-6">
@@ -261,12 +259,12 @@ const About = () => {
                       </CardContent>
                     </Card>
                   </div>
-                  
+
                   {/* Timeline Dot */}
                   <div className="hidden lg:flex w-2/12 justify-center">
                     <div className="w-4 h-4 bg-green-600 rounded-full border-4 border-background shadow-lg" />
                   </div>
-                  
+
                   <div className="w-full lg:w-5/12" />
                 </motion.div>
               ))}

@@ -5,13 +5,13 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { 
-  User, 
-  Settings, 
-  ShoppingBag, 
-  Heart, 
-  MessageSquare, 
-  Star, 
+import {
+  User,
+  Settings,
+  ShoppingBag,
+  Heart,
+  MessageSquare,
+  Star,
   Calendar,
   Phone,
   Mail,
@@ -19,7 +19,6 @@ import {
   Edit,
   LogOut
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -175,8 +174,8 @@ const Dashboard = () => {
                 <CardContent className="space-y-4">
                   {recentInquiries.slice(0, 3).map((inquiry) => (
                     <div key={inquiry.id} className="flex items-center space-x-4">
-                      <img 
-                        src={inquiry.image} 
+                      <img
+                        src={inquiry.image}
                         alt={inquiry.product}
                         className="w-12 h-12 rounded-lg object-cover"
                       />
@@ -184,9 +183,9 @@ const Dashboard = () => {
                         <p className="font-medium text-sm">{inquiry.product}</p>
                         <p className="text-xs text-muted-foreground">{inquiry.date}</p>
                       </div>
-                      <Badge 
-                        variant={inquiry.status === 'Completed' ? 'default' : 
-                                inquiry.status === 'Replied' ? 'secondary' : 'outline'}
+                      <Badge
+                        variant={inquiry.status === 'Completed' ? 'default' :
+                          inquiry.status === 'Replied' ? 'secondary' : 'outline'}
                       >
                         {inquiry.status}
                       </Badge>
@@ -211,9 +210,8 @@ const Dashboard = () => {
                           {[...Array(5)].map((_, i) => (
                             <Star
                               key={i}
-                              className={`w-3 h-3 ${
-                                i < review.rating ? 'text-yellow-400 fill-current' : 'text-gray-300'
-                              }`}
+                              className={`w-3 h-3 ${i < review.rating ? 'text-yellow-400 fill-current' : 'text-gray-300'
+                                }`}
                             />
                           ))}
                         </div>
@@ -238,8 +236,8 @@ const Dashboard = () => {
               <CardContent className="space-y-4">
                 {recentInquiries.map((inquiry) => (
                   <div key={inquiry.id} className="flex items-center space-x-4 p-4 border rounded-lg">
-                    <img 
-                      src={inquiry.image} 
+                    <img
+                      src={inquiry.image}
                       alt={inquiry.product}
                       className="w-16 h-16 rounded-lg object-cover"
                     />
@@ -247,9 +245,9 @@ const Dashboard = () => {
                       <h3 className="font-medium">{inquiry.product}</h3>
                       <p className="text-sm text-muted-foreground">Inquiry Date: {inquiry.date}</p>
                     </div>
-                    <Badge 
-                      variant={inquiry.status === 'Completed' ? 'default' : 
-                              inquiry.status === 'Replied' ? 'secondary' : 'outline'}
+                    <Badge
+                      variant={inquiry.status === 'Completed' ? 'default' :
+                        inquiry.status === 'Replied' ? 'secondary' : 'outline'}
                     >
                       {inquiry.status}
                     </Badge>
@@ -271,8 +269,8 @@ const Dashboard = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {wishlistItems.map((item) => (
                     <div key={item.id} className="border rounded-lg p-4 space-y-3">
-                      <img 
-                        src={item.image} 
+                      <img
+                        src={item.image}
                         alt={item.name}
                         className="w-full h-32 object-cover rounded-lg"
                       />
@@ -312,9 +310,8 @@ const Dashboard = () => {
                         {[...Array(5)].map((_, i) => (
                           <Star
                             key={i}
-                            className={`w-4 h-4 ${
-                              i < review.rating ? 'text-yellow-400 fill-current' : 'text-gray-300'
-                            }`}
+                            className={`w-4 h-4 ${i < review.rating ? 'text-yellow-400 fill-current' : 'text-gray-300'
+                              }`}
                           />
                         ))}
                       </div>
